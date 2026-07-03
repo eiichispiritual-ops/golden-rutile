@@ -61,7 +61,8 @@
   .hero-img::after{
     content:"";position:absolute;inset:0;
     background:
-      linear-gradient(180deg, rgba(11,9,8,.55) 0%, rgba(11,9,8,.05) 26%, rgba(11,9,8,.02) 48%, rgba(11,9,8,.62) 74%, var(--black) 96%);
+      radial-gradient(ellipse 82% 50% at 50% 82%, rgba(11,9,8,.72), transparent 78%),
+      linear-gradient(180deg, rgba(11,9,8,.55) 0%, rgba(11,9,8,.06) 24%, rgba(11,9,8,.10) 46%, rgba(11,9,8,.78) 70%, var(--black) 92%);
   }
   .hero-inner{
     position:relative;z-index:1;
@@ -434,6 +435,16 @@
     .hero-title{font-size:31px}
     .price-now{font-size:52px}
     h2{font-size:23px}
+  }
+  @media (min-width:700px){
+    .hero{min-height:100svh}
+    .hero-img{background-position:center 30%}
+    .hero-inner{padding-top:60vh}
+    .hero-kicker{font-size:13px}
+    .hero-title{font-size:54px;letter-spacing:.2em;text-indent:.2em}
+    .hero-sub{font-size:16.5px;letter-spacing:.44em;text-indent:.44em}
+    h2{font-size:29px}
+    .price-now{font-size:72px}
   }
 </style>
 
