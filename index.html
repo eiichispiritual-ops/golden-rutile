@@ -8,20 +8,25 @@
 <title>黄金波動 極上ルチル｜選ばれたあなたへ</title>
 <script>document.documentElement.classList.add("js");</script>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600;700&display=swap');
+
   :root{
     --black:#0b0908;
     --coal:#161107;
-    --gold:#c2a163;
-    --gold-hi:#eedfb2;
+    --gold-warm:#d4af37;
+    --gold-deep:#8e6d34;
+    --gold-accent:#c2a163;
+    --gold-hi:#f0e4c8;
     --sand:#e9dcbd;
     --body-c:#d5c9ae;
+    --text-secondary:#aaa398;
     --dim:#9d8e70;
     --paper:#f2e9d5;
     --paper-ink:#3f341e;
-    --serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
+    --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
     --sans:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",sans-serif;
-    --didot:"Didot","Bodoni 72",Georgia,"Times New Roman",serif;
-    --foil:linear-gradient(100deg,#a98a45 0%,#e9d494 48%,#bb9a55 100%);
+    --didot:"Crimson Text",Georgia,"Times New Roman",serif;
+    --foil:linear-gradient(100deg,#d4af37 0%,#f0e4c8 48%,#c9993d 100%);
   }
   html{scroll-behavior:smooth}
   body{
@@ -30,7 +35,8 @@
     color:var(--body-c);
     font-family:var(--serif);
     font-size:17px;
-    line-height:2.1;
+    line-height:2.15;
+    letter-spacing:.03em;
     -webkit-font-smoothing:antialiased;
     padding-bottom:0;
     overflow-x:hidden;
@@ -161,7 +167,7 @@
   }
 
   /* ── section scaffolding ── */
-  section{padding:78px 0;position:relative}
+  section{padding:90px 0;position:relative;margin-bottom:20px}
   .sec-black{background:var(--black)}
   .sec-coal{background:linear-gradient(180deg,var(--black) 0%,var(--coal) 14%,var(--coal) 86%,var(--black) 100%)}
   .sec-coal::before{
@@ -172,7 +178,7 @@
     display:block;text-align:center;
     font-family:var(--sans);font-size:11px;font-weight:600;
     letter-spacing:.46em;text-indent:.46em;
-    color:var(--gold);
+    color:var(--gold-warm);
     margin-bottom:18px;
   }
   h2{
@@ -201,7 +207,7 @@
   .rv.on .orn::before,.rv.on .orn::after{transform:scaleX(1)}
   .orn i{
     width:6px;height:6px;display:block;
-    background:var(--gold);
+    background:var(--gold-warm);
     transform:rotate(45deg) scale(0);
     transition:transform .9s cubic-bezier(.34,1.4,.44,1) .25s;
     box-shadow:0 0 12px rgba(194,161,99,.55);
@@ -229,10 +235,10 @@
   }
   @keyframes figGlow{0%,100%{opacity:0}50%{opacity:1}}
   .fig-corner{position:absolute;width:14px;height:14px;pointer-events:none}
-  .fig-corner.tl{top:-1px;left:-1px;border-top:2px solid var(--gold);border-left:2px solid var(--gold)}
-  .fig-corner.tr{top:-1px;right:-1px;border-top:2px solid var(--gold);border-right:2px solid var(--gold)}
-  .fig-corner.bl{bottom:-1px;left:-1px;border-bottom:2px solid var(--gold);border-left:2px solid var(--gold)}
-  .fig-corner.br{bottom:-1px;right:-1px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold)}
+  .fig-corner.tl{top:-1px;left:-1px;border-top:2px solid var(--gold-warm);border-left:2px solid var(--gold-warm)}
+  .fig-corner.tr{top:-1px;right:-1px;border-top:2px solid var(--gold-warm);border-right:2px solid var(--gold-warm)}
+  .fig-corner.bl{bottom:-1px;left:-1px;border-bottom:2px solid var(--gold-warm);border-left:2px solid var(--gold-warm)}
+  .fig-corner.br{bottom:-1px;right:-1px;border-bottom:2px solid var(--gold-warm);border-right:2px solid var(--gold-warm)}
   .fig img{width:100%}
   .fig-cap{
     font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;
@@ -260,13 +266,13 @@
   .journey li::before{
     content:"";position:absolute;left:-4px;top:11px;
     width:9px;height:9px;transform:rotate(45deg) scale(0);
-    background:var(--black);border:1px solid var(--gold);
+    background:var(--black);border:1px solid var(--gold-warm);
     transition:transform .7s cubic-bezier(.34,1.5,.5,1);
     transition-delay:calc(var(--i,0)*.5s + .25s);
   }
   .rv.on .journey li::before{transform:rotate(45deg) scale(1)}
   .journey li.now::before{
-    background:var(--gold);
+    background:var(--gold-warm);
     box-shadow:0 0 14px rgba(194,161,99,.8);
   }
   .rv.on .journey li.now::before{animation:nowPulse 2.6s ease-in-out 2.4s infinite}
@@ -276,7 +282,7 @@
   }
   .j-date{
     font-family:var(--sans);font-size:12px;font-weight:600;
-    letter-spacing:.22em;color:var(--gold);
+    letter-spacing:.22em;color:var(--gold-warm);
     display:block;margin-bottom:2px;
   }
   .journey li.now .j-date{color:var(--gold-hi)}
@@ -327,7 +333,7 @@
   .spec tr:first-child th,.spec tr:first-child td{border-top:1px solid rgba(194,161,99,.4)}
   .spec th{
     font-family:var(--sans);font-weight:600;font-size:12px;
-    letter-spacing:.2em;color:var(--gold);
+    letter-spacing:.2em;color:var(--gold-warm);
     white-space:nowrap;width:7.5em;padding-top:17px;
   }
   .spec td{color:var(--body-c)}
@@ -358,7 +364,7 @@
   }
   .price-label{
     font-family:var(--sans);font-size:11.5px;font-weight:600;
-    letter-spacing:.4em;text-indent:.4em;color:var(--gold);
+    letter-spacing:.4em;text-indent:.4em;color:var(--gold-warm);
     margin-bottom:26px;
   }
   .price-was{
@@ -378,13 +384,13 @@
   .rv.on .price-was .num::after{transform:scaleX(1)}
   .price-arrow{
     width:1px;height:34px;margin:14px auto;
-    background:linear-gradient(180deg,rgba(194,161,99,.1),var(--gold));
+    background:linear-gradient(180deg,rgba(194,161,99,.1),var(--gold-warm));
     position:relative;
   }
   .price-arrow::after{
     content:"";position:absolute;bottom:-1px;left:-4px;
     width:8px;height:8px;
-    border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);
+    border-right:1px solid var(--gold-warm);border-bottom:1px solid var(--gold-warm);
     transform:rotate(45deg);
   }
   .price-now{
@@ -434,7 +440,7 @@
     content:"";position:absolute;left:10px;top:28px;
     width:7px;height:7px;transform:rotate(45deg) translateX(-8px);
     opacity:0;
-    border-top:1.5px solid var(--gold);border-right:1.5px solid var(--gold);
+    border-top:1.5px solid var(--gold-warm);border-right:1.5px solid var(--gold-warm);
     transition:opacity .7s ease,transform .7s cubic-bezier(.3,.6,.3,1);
     transition-delay:calc(var(--i,0)*.12s + .4s);
   }
@@ -447,7 +453,7 @@
     content:counter(s,decimal-leading-zero);
     position:absolute;left:0;top:4px;
     font-family:var(--didot);font-size:21px;
-    color:var(--gold);letter-spacing:.05em;
+    color:var(--gold-warm);letter-spacing:.05em;
     width:40px;text-align:center;
   }
   .steps li::after{
@@ -467,7 +473,7 @@
     border:1px solid rgba(194,161,99,.3);
     padding:20px 22px;margin-top:16px;text-align:center;
   }
-  .pay b{color:var(--gold);font-weight:600;letter-spacing:.24em;display:block;margin-bottom:6px}
+  .pay b{color:var(--gold-warm);font-weight:600;letter-spacing:.24em;display:block;margin-bottom:6px}
 
   /* ── FAQ ── */
   .faq{margin-top:8px}
@@ -483,16 +489,16 @@
   summary::-webkit-details-marker{display:none}
   summary::before{
     content:"Q";position:absolute;left:2px;top:23px;
-    font-family:var(--didot);font-size:17px;color:var(--gold);
+    font-family:var(--didot);font-size:17px;color:var(--gold-warm);
   }
   summary::after{
     content:"";position:absolute;right:10px;top:50%;
     width:9px;height:9px;margin-top:-7px;
-    border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);
+    border-right:1.5px solid var(--gold-warm);border-bottom:1.5px solid var(--gold-warm);
     transform:rotate(45deg);transition:transform .35s cubic-bezier(.3,.6,.3,1);
   }
   details[open] summary::after{transform:rotate(225deg);margin-top:-2px}
-  summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  summary:focus-visible{outline:2px solid var(--gold-warm);outline-offset:2px}
   .faq-a{padding:0 6px 28px 34px;font-size:15.5px;color:var(--body-c)}
   .faq-a p{margin-bottom:1.25em}
 
